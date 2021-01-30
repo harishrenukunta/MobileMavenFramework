@@ -23,4 +23,12 @@ public class LaunchTests extends BaseTestCase {
                 .contains(expectedCategory);
         System.out.println("");
     }
+
+    @Test
+    public void checkCategoryInSpecialBuys(){
+        HomePage homePage = PageObjectFactory.getPage(driver, HomePage.class);
+        final SpecialBuys specialBuys = homePage.gotoSpecialBuys();
+        specialBuys.goToCategories();
+        System.out.println("");
+    }
 }
